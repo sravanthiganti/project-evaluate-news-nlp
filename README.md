@@ -29,10 +29,27 @@ Remember that once you clone, you will still need to install everything:
 
 ## Setting up the API
 
-The Aylien API is perhaps different than what you've used before. It has you install a node module to run certain commands through, it will simplify the requests we need to make from our node/express backend.
+The  Meaning cloud API is perhaps different than what you've used before. It has you install a node module to run certain commands through, it will simplify the requests we need to make from our node/express backend.
+
+This project runs on a local server. It uses Node. If you don't have Node already installed on your machine, you can download it [**here**](https://nodejs.org/en/download/).
 
 ### Step 1: Signup for an API key
-First, you will need to go [Meaning Cloud developer Page ](https://www.meaningcloud.com/developer/login). Signing up will get you an API key.
+First, you will need to go [Meaning Cloud developer Page ](https://www.meaningcloud.com/developer/login). Signing up will get you an API key. The sign-up page is [**here**](https://www.meaningcloud.com/developer/create-account).
+
+After you get your API key, make a file called *.env* in the project root folder. File should contain:
+
+```
+API_KEY={your key here}
+```
+
+```
+When those packages have installed, make builds and start the server with the following commands (note that the build-dev runs webpack-dev-server):
+
+```
+npm run build-dev
+npm run build-prod
+npm run start
+```
 
 ### Results:
 

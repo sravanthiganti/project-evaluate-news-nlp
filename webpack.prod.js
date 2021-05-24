@@ -28,12 +28,7 @@ module.exports = {
                 test: /\.png|jpg$/,
                 loader: 'file-loader',
                 options: { name: '[name].[ext]' }
-            },
-            
-            {
-                test: /\.html$/,
-                loader: 'html-loader'
-            },
+            }
         ]
     },
     plugins: [
