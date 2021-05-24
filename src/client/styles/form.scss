@@ -1,0 +1,29 @@
+$buttoncolour: #8cd9b1;
+$hovercolour: #40bf7d;
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 20px;
+    width: 70%;
+    margin: auto;
+
+    input {
+        padding: 5px 20px;
+        width: 90%;
+        font-size: 1.3em;
+        margin: 10px 0;
+    }
+
+    .button {
+        background-color: $buttoncolour;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $hovercolour;
+        }
+    }
+}
