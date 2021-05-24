@@ -36,6 +36,6 @@ First, you will need to go [Meaning Cloud developer Page ](https://www.meaningcl
 
 ### Results:
 
-![Screenshots](https://github.com/sravanthiganti/project-evaluate-news-nlp/blob/main/Results/Sentiment-Analyser.png)
+![Screenshots](https://github.com/sravanthiganti/project-evaluate-news-nlp/blob/main/results/Sentiment-Analyser.png)
 
 
