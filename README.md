@@ -42,8 +42,7 @@ After you get your API key, make a file called *.env* in the project root folder
 API_KEY={your key here}
 ```
 
-```
-When those packages have installed, make builds and start the server with the following commands (note that the build-dev runs webpack-dev-server):
+When those packages have installed, make builds and start the server with the following commands (note that the build-dev runs webpack-dev-server)
 
 ```
 npm run build-dev
