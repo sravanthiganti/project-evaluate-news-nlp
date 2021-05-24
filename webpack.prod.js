@@ -25,10 +25,11 @@ module.exports = {
                 use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
             },
             {
-                test: /\.png$/,
+                test: /\.png|jpg$/,
                 loader: 'file-loader',
                 options: { name: '[name].[ext]' }
             },
+            
             {
                 test: /\.html$/,
                 loader: 'html-loader'

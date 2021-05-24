@@ -1,8 +1,12 @@
-$headcolour: #8cd9b1;
+$keycolor: rgb(49, 3, 158);
 
 header {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     padding: 10px 40px;
-    margin-bottom: 40px;
-    background-color: $headcolour;
+}
+
+h1 {
+    font: 800 2.5rem "Roboto Slab", serif;
+    text-decoration: underline overline $keycolor;
 }

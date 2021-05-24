@@ -1,15 +1,22 @@
-$footcolour: #8cd9b1;
-
 footer {
+    padding: 0.5rem 0 0;
+    opacity: 0.7;
+}
+
+.fnav ul {
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    padding: 10px;
-    margin-top: 40px;
-    background-color: $footcolour;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    height: 4em;
+}
+
+
+.fnav li {
+    padding: 0 0.25em;
+    font-size: 1.75em;
+}
+
+
+.copyright {
+    text-align: center;
+    font-size: 0.75em;
+    padding: 0 0.5rem 0.5rem;
 }
