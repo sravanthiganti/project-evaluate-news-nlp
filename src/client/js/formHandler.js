@@ -2,8 +2,6 @@ const fetch = require('node-fetch')
 
 export const handleSubmit = async (event) => {
     event.preventDefault()
-
-    document.getElementById('results').innerHTML = ""
     document.getElementById('subjectivity').innerHTML = ""
     document.getElementById('score').innerHTML = ""
     document.getElementById("confidence").innerHTML = ""

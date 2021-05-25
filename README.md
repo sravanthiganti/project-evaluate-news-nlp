@@ -52,6 +52,8 @@ npm run start
 
 ### Results:
 
-![Screenshots](https://github.com/sravanthiganti/project-evaluate-news-nlp/blob/main/results/Sentiment-Analyser.png)
+![Screenshots](https://github.com/sravanthiganti/project-evaluate-news-nlp/blob/main/results/Happy-Path.png)
+
+![Error](https://github.com/sravanthiganti/project-evaluate-news-nlp/blob/main/results/error.png)
 
 
