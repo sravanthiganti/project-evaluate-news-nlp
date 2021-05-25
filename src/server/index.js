@@ -21,15 +21,17 @@ app.use(express.static('dist'))
 
 console.log(__dirname)
 
-// API
-const baseURL = 'https://api.meaningcloud.com/sentiment-2.1?'
-const apiKey = process.env.API_KEY
+
+const URL_ROOT = "https://api.meaningcloud.com/sentiment-2.1"
+const URL_KEY = `?key=${process.env.API_KEY}`
+const URL_LANG = "&lang=en"
+const URL_USER_INPUT = "&url="
+const port = 8081
 console.log(`Your API Key is ${process.env.API_KEY}`);
-let userInput = [] // const does not work
+
 
 app.get('/', function (req, res) {
     res.sendFile('dist/index.html')
-    //res.sendFile(path.resolve('src/client/views/index.html'))
 })
 
 app.get('/test', function (req, res) {
@@ -38,14 +40,18 @@ app.get('/test', function (req, res) {
 
 
 const callMeaningCloudAPI = async function(req, res) {
-    userInput = req.body.url;
-    console.log(`You entered: ${userInput}`);
-    const apiURL = `${baseURL}key=${apiKey}&url=${userInput}&lang=en`
-
-    const response = await fetch(apiURL)
-    const meaningCloudData = await response.json()
-    console.log(meaningCloudData )
-    res.send(meaningCloudData)
+    console.log(`You entered: ${req.body.url}`);
+    const fullUrl = URL_ROOT + URL_KEY + URL_LANG + URL_USER_INPUT + req.body.url
+    console.log(fullUrl)
+    const response = await fetch(fullUrl)
+    try {
+        const meaningCloudData = await response.json()
+        console.log("Correct response received from Meaning cloud")
+        res.send(meaningCloudData)
+    }
+    catch{
+        console.error("Unknown eror -- Call to MC either failed or didn't work");
+    }
 }
 
 // POST Route
@@ -53,6 +59,6 @@ app.post('/call', callMeaningCloudAPI)
 
 
 // designates what port the app will listen to for incoming requests
-app.listen(8081, function () {
-    console.log('Example app listening on port 8081!')
+app.listen(port, function () {
+    console.log(` project-evaluate app listening on port ${port}`)
 })

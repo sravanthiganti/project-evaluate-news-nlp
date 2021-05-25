@@ -1,4 +1,4 @@
-import {  checkForURL } from './js/urlchecker'
+import {  checkURL } from './js/urlchecker'
 import { handleSubmit } from './js/formHandler'
 
 import './images/meaningCloud-logo.png'
@@ -13,7 +13,7 @@ import './styles/header.scss'
 
 
 export {
-    checkForURL,
+    checkURL,
     handleSubmit,
 }
 
