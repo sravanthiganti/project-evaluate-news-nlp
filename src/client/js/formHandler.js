@@ -18,7 +18,7 @@ export const handleSubmit = async (event) => {
         errorElement.innerHTML = ""
     }
     const port = process.env.PORT || 8081
-    let apiData = await callApiMC(`http://localhost:${port}/call`, {"url":userGivenInputURL})
+    let apiData = await callApiMC(`/call`, {"url":userGivenInputURL})
 
     // Convert response to JSON, call updateUI
     .then(apiData => apiData.json())
