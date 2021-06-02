@@ -31,7 +31,19 @@ export const handleSubmit = async (event) => {
 
 // Post route to server which will do API call
 export async function callApiMC(url,userData) {
-    let response = await fetch(url, {
+    const port = 8081;
+    console.log(`port is ${port}`)
+    const mode = process.env.NODE_ENV;
+    let localUrl;
+    if(mode === "DEV"){
+       localUrl = `http://localhost:${port}${url}`
+       console.log(`URL is ${localUrl}`)
+    } else{
+        localUrl = url
+        console.log(`URL is ${localUrl}`)
+    }
+
+    let response = await fetch(localUrl, {
         method: 'POST',
         credentials: 'same-origin',
         mode: 'cors',
