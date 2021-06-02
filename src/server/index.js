@@ -26,7 +26,8 @@ const URL_ROOT = "https://api.meaningcloud.com/sentiment-2.1"
 const URL_KEY = `?key=${process.env.API_KEY}`
 const URL_LANG = "&lang=en"
 const URL_USER_INPUT = "&url="
-const port = 8081
+const port = process.env.PORT || 8081
+
 console.log(`Your API Key is ${process.env.API_KEY}`);
 
 
